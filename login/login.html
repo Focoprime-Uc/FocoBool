@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VilaTaxi | Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../estilos/menu.css">
+
+</head>
+<body>
+
+<div class="login-container">
+  <div id="loginArea">
+
+<h2>Iniciar Sessão</h2>
+
+<!-- Login com Email -->
+<div class="input-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="seu@email.com">
+  </div>
+
+  <div class="input-group">
+    <label for="password">Senha</label>
+    <input type="password" id="password" placeholder="••••••••">
+  </div>
+
+  <button class="login-btn" id="loginBtn">Iniciar Sessão</button>
+  
+  <!--- Divisão --->
+  <div class="divider">
+<span>ou</span>
+</div>
+
+  <!-- Login Social -->
+  <button class="social-btn google">
+  <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google">
+  Continuar com Google
+</button>
+  <button class="social-btn apple"><i class="ri-apple-fill"></i> Continuar com Apple</button>
+  
+  <!--- Políticas de privacidade --->
+  <div class="terms">
+Ao continuar você concorda com nossas 
+<a href="#">Políticas de Privacidade</a>.
+</div>
+
+  <!-- Criar Conta -->
+  <div class="create-account">
+    Não tem conta? <a href="#createAccount" onclick="showCreateAccount()">Criar Conta</a>
+  </div>
+  
+  </div>
+  
+  <!--- Criar conta --->
+
+  <div id="createAccount" style="display:none; margin-top:20px;">
+    <div class="photo-upload">
+
+<div class="progress-ring" id="progressRing"></div>
+
+<label for="profilePhoto">
+<i class="ri-add-line"></i>
+</label>
+
+<input type="file" id="profilePhoto" accept="image/*">
+
+<img id="photoPreview">
+
+</div>
+
+<!--- aviso de tamanho --->
+<div class="photo-info">
+<i class="ri-information-line"></i>
+<span>A imagem deve ter no máximo <b>10MB</b>. Arquivos maiores não serão aceitos.</span>
+</div>
+
+<!--- aviso moderno --->
+<div id="formAlert" class="image-alert">
+<i class="ri-error-warning-line"></i>
+<span id="formAlertText">Erro no formulário</span>
+</div>
+
+    <div class="input-group">
+      <label for="newName">Nome</label>
+      <input type="text" id="newName" placeholder="Seu nome">
+    </div>
+
+    <div class="input-group">
+      <label for="newEmail">Email</label>
+      <input type="email" id="newEmail" placeholder="seu@email.com">
+    </div>
+
+    <div class="input-group">
+      <label for="newPassword">Senha</label>
+      <input type="password" id="newPassword" placeholder="••••••••">
+    </div>
+
+    <button class="login-btn next-btn" onclick="nextStep()">
+Próximo <i class="ri-arrow-right-line"></i>
+</button>
+
+<!--- Campo 2 --->
+<div id="extraData" style="display:none; margin-top:15px;">
+
+<div class="form-desc">
+Preencha os campos com os seus dados
+</div>
+
+<div class="input-group data">
+<label>Bairro <strong>(Opcional)</strong></label>
+<input type="text" id="bairro" placeholder="Ex: 25 de Junho">
+</div>
+
+<div class="input-group">
+<label>Gênero <strong>(Opcional)</strong></label>
+<select id="gender">
+<option value="">Selecionar</option>
+<option>Masculino</option>
+<option>Feminino</option>
+<option>Outro</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>Número de telefone</label>
+
+<div class="phone-input">
+
+<div class="flag">
++258
+</div>
+
+<input type="tel" id="phone" placeholder="84 123 4567">
+
+</div>
+
+</div>
+
+<button class="login-btn" id="createAccountBtn">Criar Conta</button>
+
+</div>
+    
+    <!--- Políticas de privacidade --->
+    <div class="terms">
+Ao criar uma conta você concorda com nossas 
+<a href="#">Políticas de Privacidade</a>.
+</div>
+
+<div class="back-login">
+<a href="#" onclick="showLogin()">← Voltar para login</a>
+</div>
+    
+  </div>
+</div>
+
+<!--- bloqueio de tamanho --->
+<div id="imageAlert" class="image-alert">
+<i class="ri-error-warning-line"></i>
+<span>A imagem é maior que 10MB. Escolha uma imagem menor.</span>
+</div>
+
+<script>
+// MUDAR DE ABAS
+  function showCreateAccount() {
+
+document.getElementById("loginArea").style.display = "none";
+document.getElementById("createAccount").style.display = "block";
+
+}
+
+function showLogin(){
+
+document.getElementById("createAccount").style.display = "none";
+document.getElementById("loginArea").style.display = "block";
+
+}
+
+// CAMPO 2
+function nextStep(){
+
+document.querySelector(".next-btn").style.display="none";
+document.getElementById("extraData").style.display="block";
+
+}
+</script>
+
+<script type="module" src="login.js"></script>
+
+</body>
+</html>

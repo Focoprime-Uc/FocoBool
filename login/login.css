@@ -1,0 +1,342 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+}
+
+.login-btn, .social-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.login-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+.social-btn.google {
+  background: #fff;
+  color: #555;
+  border: 1px solid #ccc;
+}
+
+.social-btn.apple {
+  background: #000;
+  color: #fff;
+}
+
+.social-btn i {
+  font-size: 18px;
+}
+
+.create-account {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.create-account a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.photo-upload {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.photo-upload input[type="file"] {
+  display: none;
+}
+
+.photo-upload label {
+  width: 80px;
+  height: 80px;
+  background: #f3f3f3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 28px;
+  color: #999;
+  border: 2px dashed #ccc;
+  transition: 0.2s;
+}
+
+.photo-upload label:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* TERMOS E LOGIN */
+.terms{
+text-align:center;
+font-size:12px;
+color:#777;
+margin-top:15px;
+line-height:1.4;
+}
+
+.terms a{
+color: var(--primary);
+text-decoration:none;
+font-weight:500;
+}
+
+.back-login{
+text-align:center;
+margin-top:10px;
+}
+
+.back-login a{
+color:#555;
+font-size:13px;
+text-decoration:none;
+}
+
+/* DIVISÃO */
+.divider{
+display:flex;
+align-items:center;
+text-align:center;
+margin:15px 0;
+color:#777;
+font-size:13px;
+}
+
+.divider::before,
+.divider::after{
+content:"";
+flex:1;
+border-bottom:1px solid #ddd;
+}
+
+.divider span{
+margin:0 10px;
+}
+
+/* DESCRIÇÃO */
+.form-desc{
+font-size:13px;
+color:#666;
+text-align:center;
+margin-bottom:15px;
+}
+
+/* NÚMERO DE CELULAR */
+.phone-input{
+display:flex;
+align-items:center;
+border:1px solid #ccc;
+border-radius:12px;
+overflow:hidden;
+}
+
+.phone-input input{
+border:none;
+flex:1;
+padding:12px;
+outline:none;
+font-size:14px;
+}
+
+.flag{
+background:#f3f3f3;
+padding:12px;
+font-size:13px;
+color:#444;
+border-right:1px solid #ccc;
+}
+
+/* GÉNERO */
+select{
+padding:12px 15px;
+border-radius:12px;
+border:1px solid #ccc;
+font-size:14px;
+outline:none;
+}
+
+.data {
+  width: 100%;
+}
+
+.photo-upload{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+/* círculo */
+.photo-upload label{
+  width:100%;
+  height:100%;
+  background:#f3f3f3;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  font-size:28px;
+  color:#999;
+  border:2px dashed #ccc;
+  overflow:hidden;
+  position:relative;
+  z-index:2;
+}
+
+/* preview da foto */
+#photoPreview{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  display:none;
+  z-index:3;
+}
+
+/* progresso circular */
+.progress-ring{
+  position:absolute;
+  top:-4px;
+  left:-4px;
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  background:conic-gradient(#8e7afe 0deg, #e6e6e6 0deg);
+  z-index:1;
+  display:none;
+}
+
+/*  Informação */
+.photo-info{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:12px;
+color:#777;
+margin-top:6px;
+justify-content:center;
+text-align:center;
+}
+
+.photo-info i{
+font-size:14px;
+color: var(--primary);
+}
+
+/* ALERTA DE IMAGEM */
+.image-alert{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%) translateY(-20px);
+background: var(--primary);
+color:white;
+padding:12px 16px;
+border-radius:12px;
+font-size:13px;
+display:flex;
+align-items:center;
+gap:8px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:9999;
+}
+
+.image-alert.show{
+opacity:1;
+transform:translateX(-50%) translateY(0);
+}
+
+.image-alert i{
+font-size:18px;
+}
+
+/* SPINNER LOGIN */
+
+.spinner{
+width:18px;
+height:18px;
+border:2px solid rgba(255,255,255,0.4);
+border-top:2px solid white;
+border-radius:50%;
+animation:spin 0.8s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+.social-btn.google img{
+  width: 18px;
+  height: 18px;
+}
