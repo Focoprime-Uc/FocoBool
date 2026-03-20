@@ -1,0 +1,144 @@
+/* Match Premium */
+.match.premium {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.match.premium:hover {
+  transform: translateY(-2px);
+}
+
+.team-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.team-logo img {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.live-badge {
+  font-size: 0.7rem;
+  color: white;
+  background: red;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-top: 4px;
+  animation: pulseLive 1s infinite;
+}
+
+@keyframes pulseLive {
+  0% { transform: scale(1); opacity:1;}
+  50% { transform: scale(1.1); opacity:0.7;}
+  100% { transform: scale(1); opacity:1;}
+}
+
+@keyframes blink {
+  0%,50%,100% {opacity:1;}
+  25%,75% {opacity:0;}
+}
+
+/* Tabela */
+.league-table {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  font-size: 0.75rem;
+}
+
+.table-header, .table-row {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px 30px 30px 30px 30px 30px 30px;
+  padding: 6px 10px;
+  gap: 4px;
+  align-items: center;
+}
+
+.table-header {
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+}
+
+.table-row:nth-child(even) {
+  background: rgba(0,0,0,0.03);
+}
+
+/* SKELETON AO PROCESSAR */
+.skeleton {
+  animation: pulse 1.2s infinite ease-in-out;
+  background: linear-gradient(
+    90deg,
+    var(--input-bg) 25%,
+    #e0e0e0 50%,
+    var(--input-bg) 75%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes pulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* skeleton card */
+.skeleton-match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: var(--card-bg);
+}
+
+.skeleton-team {
+  width: 30%;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.skeleton-score {
+  width: 20%;
+  height: 14px;
+  border-radius: 6px;
+}
+
+/* tabela skeleton */
+.skeleton-table-row {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 5px;
+  padding: 6px;
+}
+
+.skeleton-cell {
+  height: 10px;
+  border-radius: 4px;
+}

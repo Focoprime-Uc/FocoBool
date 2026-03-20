@@ -1,0 +1,178 @@
+.detalhe-jogo {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.detalhe-jogo h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.detalhe-score {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* EFEITO AO ABRIR */
+.page {
+  display: none;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.3s ease;
+}
+
+.page.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* BTN VOLTAR E DETALHES DO JOGO */
+.game-header button {
+  background: var(--input-bg);
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.match.premium {
+  position: relative;
+  overflow: hidden;
+}
+
+.match.premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.match.premium:hover::after {
+  opacity: 1;
+}
+
+
+
+/* CARD ABERTO PREMIUM */
+.premium-open {
+  position: relative;
+  padding: 20px;
+}
+
+/* FAVORITO */
+.fav-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: var(--card-bg);
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  color: var(--primary);
+}
+
+/* TIMES */
+.teams-open {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.team-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.team-open img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.team-open span {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* SCORE */
+.score-open {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.score-open span {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+/* INFO */
+.game-info {
+  margin-top: 15px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.game-info div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ESTATÍSTICAS */
+.stats {
+  margin-top: 20px;
+}
+
+.stats h4 {
+  margin-bottom: 10px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar {
+  flex: 1;
+  height: 6px;
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: var(--primary);
+}
+
+.stats small {
+  display: block;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}

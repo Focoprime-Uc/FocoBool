@@ -1,0 +1,141 @@
+/* FOOTER MODERNO PREMIUM */
+.site-footer-modern {
+  backvground: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: var(--text-color);
+  padding: 10px;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+}
+
+.footer-container-modern {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section-modern {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.footer-section-modern h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.footer-section-modern ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section-modern ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section-modern ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.footer-section-modern ul li a:hover {
+  color: var(--primary);
+}
+
+/* NEWSLETTER */
+.newsletter p {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: gray;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+.newsletter button {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0 12px 12px 0;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1rem;
+}
+
+.newsletter button:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+/* REDES SOCIAIS MODERNAS */
+.social-icons-modern {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons-modern a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--input-bg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-icons-modern a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom-modern {
+  margin-top: 2rem;
+  text-align: center;
+  color: gray;
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-container-modern {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    border-radius: 12px;
+    width: 100%;
+  }
+}
