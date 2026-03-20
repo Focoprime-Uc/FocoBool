@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focobool</title>
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="estilos/card.css">
+  <link rel="stylesheet" href="estilos/banner.css">
+  <link rel="stylesheet" href="estilos/empresas.css">
+  <link rel="stylesheet" href="estilos/openticket.css">
+  <link rel="stylesheet" href="estilos/footer.css">
+  <link rel="stylesheet" href="estilos/opengame.css">
+  <link rel="stylesheet" href="estilos/perfil.css">
+  <link rel="stylesheet" href="estilos/news.css">
+  
+  <link rel="stylesheet" href="estilos/resultados.css">
+  
+  <link rel="stylesheet" href="estilos/ticket-card.css">
+</head>
+<body>
+  
+  <!--- CABEÇALHO FIXO --->
+  <header class="header">
+  <div class="logo">
+    <img src="images/entrada.png" alt="Logo">
+  </div>
+
+  <div class="header-right">
+    <!-- BARRA DE PESQUISA -->
+    <div class="search-container">
+      <input type="text" placeholder="Pesquisar jogo..." id="searchInput">
+      <button><i class="ri-search-line"></i></button>
+    </div>
+
+    <!-- ICONES DIREITA -->
+    <div class="header-icons">
+      <button id="themeToggle"><i class="ri-sun-line"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- MENU HORIZONTAL FIXO -->
+<nav class="bottom-menu">
+  <button class="menu-item active" data-page="home">
+    <i class="ri-home-5-line"></i>
+    <span>Início</span>
+  </button>
+  <button class="menu-item" data-page="jobs">
+    <i class="ri-football-line"></i>
+    <span>Jogos</span>
+  </button>
+  <button class="menu-item" data-page="news">
+    <i class="ri-video-line"></i>
+    <span>Notícias</span>
+  </button>
+  <button class="menu-item" data-page="notificationsPage">
+    <i class="ri-notification-line"></i>
+    <span>Notificações</span>
+  </button>
+  <button class="menu-item" data-page="profile">
+    <i class="ri-user-line"></i>
+    <span>Perfil</span>
+  </button>
+</nav>
+
+<!-- THEME SWITCH PREMIUM -->
+<div class="theme-bar">
+  <button id="lightMode">
+    <i class="ri-sun-line"></i>
+  </button>
+  <button id="darkMode">
+    <i class="ri-moon-line"></i>
+  </button>
+</div>
+
+  <!-- Conteúdo de exemplo -->
+  <main class="main">
+    
+    <section id="ticketPage" class="page">
+      
+      <div class="game-header">
+  <button onclick="voltarHome()">
+    <i class="ri-arrow-left-line"></i>
+  </button>
+  <h3>Detalhes do Jogo</h3>
+</div>
+
+  <div id="ticketDetalhe"></div>
+
+</section>
+
+  <!-- HOME -->
+  <section id="home" class="page active">
+
+<!-- Banner Slider -->
+<div class="banner">
+
+  <div class="banner-slider">
+
+    <div class="slide active">
+      <img src="images/banner-1.png">
+    </div>
+
+    <div class="slide">
+      <img src="images/taxi.png">
+    </div>
+
+    <div class="slide">
+      <img src="images/mara.png">
+    </div>
+
+  </div>
+
+  <!-- indicadores -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
+
+
+<!-- RESULTADOS -->
+<div class="results-box">
+  <h3><i class="ri-football-line"></i> Resultados ao Vivo</h3>
+  <div id="results"></div>
+</div>
+
+  </section>
+
+  <!-- VAGAS -->
+  <section id="jobs" class="page">
+
+    <div class="empty">
+      <i class="ri-notification-line"></i>
+      <p>Não há nada para mostrar aqui</p>
+    </div>
+
+  </section>
+  
+   <section id="news" class="page">
+     
+     <div class="categories">
+  <button class="active">Todos</button>
+  <button>Europa</button>
+  <button>Transferências</button>
+  <button>Champions</button>
+</div>
+     
+     <div class="news-container" id="newsContainer">
+       
+  <p>Carregando notícias...</p>
+</div>
+
+  </section>
+  
+  <section id="newsOpen" class="page">
+
+  <div class="game-header">
+    <button onclick="voltarNoticias()">
+      <i class="ri-arrow-left-line"></i>
+    </button>
+    <h3>Notícia</h3>
+  </div>
+
+  <div class="news-open-content" id="newsOpenContent"></div>
+
+</section>
+
+  <!-- NOTIFICAÇÕES -->
+  <section id="notificationsPage" class="page">
+    <div class="empty">
+      <i class="ri-notification-line"></i>
+      <p>Não há nada para mostrar aqui</p>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="profile" class="page">
+    
+    <div class="settings-page">
+
+<h2>Seu Perfil</h2>
+
+<div class="user-box">
+  <div class="avatar">
+    <img id="settingsPhoto" src="images/avatar.png">
+  </div>
+
+  <div class="user-info">
+    <h3 id="settingsName" class="skeleton">
+      Carregando...
+      <i class="ri-verified-badge-fill verified"></i>
+    </h3>
+    <p id="settingsEmail" class="skeleton">...</p>
+  </div>
+</div>
+
+<div class="be-driver" id="beDriverBtn">
+  <div class="left">
+    <i class="ri-steering-2-line"></i>
+    <div class="text">
+      <p class="title">Tornar-se Premium</p>
+      <span>Torne se pro e receba todas as novidades em primeira mão</span>
+    </div>
+  </div>
+  <i class="ri-arrow-right-s-line arrow"></i>
+</div>
+
+<div class="driver-form" id="driverForm">
+
+  <h3>Tornar-se motorista</h3>
+
+</div>
+
+<!-- NOVOS DADOS -->
+<div class="settings-list">
+
+  <div class="settings-item">
+  <div class="left">
+    <i class="ri-phone-line"></i>
+    <div class="text">
+      <p class="title">Telefone</p>
+      <span id="settingsPhone" class="skeleton">Adicionar número</span>
+    </div>
+  </div>
+  <i class="ri-arrow-right-s-line arrow"></i>
+</div>
+
+<div class="settings-item">
+  <div class="left">
+    <i class="ri-cake-2-line"></i>
+    <div class="text">
+      <p class="title">Data de nascimento</p>
+      <span id="settingsBirth" class="skeleton">Definir data</span>
+    </div>
+  </div>
+  <i class="ri-arrow-right-s-line arrow"></i>
+</div>
+
+<div class="settings-item">
+  <div class="left">
+    <i class="ri-palette-line"></i>
+    <div class="text">
+      <p class="title">Tema</p>
+      <span>Claro / Escuro</span>
+    </div>
+  </div>
+  <i class="ri-arrow-right-s-line arrow"></i>
+</div>
+
+  <div class="settings-item">
+    <div class="left">
+      <i class="ri-notification-3-line"></i>
+      <span>Notificações</span>
+    </div>
+    <i class="ri-arrow-right-s-line"></i>
+  </div>
+
+  <div class="settings-item">
+    <div class="left">
+      <i class="ri-lock-line"></i>
+      <span>Privacidade</span>
+    </div>
+    <i class="ri-arrow-right-s-line"></i>
+  </div>
+
+  <div class="settings-item logout" id="logoutBtn">
+    <div class="left">
+      <i class="ri-logout-box-line"></i>
+      <span class="sair">Sair da sua conta</span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+    
+  </section>
+
+</main>
+
+  <!-- JS -->
+  <script type="module" src="auth/user.js"></script>
+  
+  <script src="script.js"></script>
+  <script src="scripts/news.js"></script>
+  <script src="scripts/resultados.js"></script>
+  <script src="function/ticket.js"></script>
+  <script src="tickets/home.js"></script>
+  <script src="scripts/banner.js"></script>
+</body>
+</html>
